@@ -1,0 +1,5 @@
+To make this app
+1st We will have to make the basic html structure with css and js trivially.
+Then we will have to create the webcam scanning system and integrate it with the website
+Then We will zip it all into an app.
+Then we enjoy our book borrowing system.
