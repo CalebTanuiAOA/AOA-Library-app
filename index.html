@@ -1,27 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <strong> <link rel="stylesheet" href="styles.css"> </strong>
-</head>
-<body>
-    <header>
-        <h1>Welcome</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AOA Library is a website used in the within the school for students and staff in book borrowing and management."
+    />
+    <title>AOA Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="AOA Library home">
+          <span class="brand-mark">A</span>
+          <span>AOA Library</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mainNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#returns">Returning</a>
+          <a href="#staff">Staff Mode</a>
+        </nav>
+      </div>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#staff">Staff Mode</a>
-    </nav>
-    <main>
-        <h2>AOA Library Scanning System</h2>
-        <p>This is the beginning of our library scanning system.</p>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Modern digital library</p>
+            <h1>Books, learning, and community in one place.</h1>
+            <p class="lead">
+              Create a welcoming library experience with curated collections,
+              digital checkout tools, and a user-friendly space for students,
+              staff, and visitors.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-btn" href="#collection">Browse catalog</a>
+              <a class="secondary-btn" href="#staff">Staff access</a>
+            </div>
+
+            <ul class="hero-meta" aria-label="Library highlights">
+              <li><strong>18k+</strong><span>titles</span></li>
+              <li><strong>90%</strong><span>digital access</span></li>
+              <li><strong>24/7</strong><span>online portal</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-panel" aria-label="Library overview card">
+            <div class="book-stand">
+              <div class="book book-one"></div>
+              <div class="book book-two"></div>
+              <div class="book book-three"></div>
+            </div>
+
+            <div class="info-card feature-card">
+              <p class="feature-label">Featured collection</p>
+              <h2>Creative Thinking</h2>
+              <div class="feature-progress">
+              </div>
+            </div>
+
+            <div class="info-card hours-card">
+              <p>Open today</p>
+              <strong>7:00 AM - 9:00 PM on weekdays</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Library statistics">
+        <div class="container stats-grid">
+          <article class="stat-item">
+            <strong>25+</strong>
+            <span>reading clubs</span>
+          </article>
+          <article class="stat-item">
+            <strong>300+</strong>
+            <span>study spaces</span>
+          </article>
+          <article class="stat-item">
+            <strong>4.9/5</strong>
+            <span>member rating</span>
+          </article>
+          <article class="stat-item">
+            <strong>100%</strong>
+            <span>digital friendly</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="collection">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Curated collections</p>
+            <h2>Built for discovery and learning.</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="library-card accent-card">
+              <span class="tag">Featured</span>
+              <h3>Business & Leadership</h3>
+              <p>
+                Practical insights for teams, founders, and future leaders.
+              </p>
+              <div class="card-meta">
+                <span>0 titles</span>
+                <span>Updated weekly</span>
+              </div>
+            </article>
+
+            <article class="library-card">
+              <span class="tag">Popular</span>
+              <h3>Technology</h3>
+              <p>
+                Explore coding, AI, digital design, and future-ready skills.
+              </p>
+              <div class="card-meta">
+                <span>0 titles</span>
+                <span>New arrivals</span>
+              </div>
+            </article>
+
+            <article class="library-card">
+              <span class="tag">Top picks</span>
+              <h3>Science & Research</h3>
+              <p>
+                Discover journals, references, and innovative study materials.
+              </p>
+              <div class="card-meta">
+                <span>180 titles</span>
+                <span>Peer-reviewed</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block muted-section" id="services">
+        <div class="container">
+          <div class="section-heading narrow">
+            <p class="eyebrow">What we offer</p>
+            <h2>A complete library experience.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-item">
+              <div class="service-icon">01</div>
+              <h3>Self-checkout</h3>
+              <p>
+                Fast and secure borrowing with a simplified user flow for modern
+                library systems.
+              </p>
+            </article>
+
+            <article class="service-item">
+              <div class="service-icon">02</div>
+              <h3>Digital access</h3>
+              <p>
+                Give members instant access to digital resources, reading lists,
+                and online catalogs.
+              </p>
+            </article>
+
+            <article class="service-item">
+              <div class="service-icon">03</div>
+              <h3>Study spaces</h3>
+              <p>
+                Support learning with quiet rooms, collaboration areas, and
+                technology-enabled workstations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block info-panel" id="staff">
+        <div class="container panel-grid">
+          <div class="panel-copy">
+            <p class="eyebrow">For staff & administrators</p>
+            <h2>Keep operations efficient and member-friendly.</h2>
+            <p>
+              Use a clean dashboard structure for inventory, circulation, and
+              resource tracking. The template is ready to extend with your own
+              management tools and workflows.
+            </p>
+            <ul class="check-list">
+              <li>Inventory monitoring</li>
+              <li>Borrowing and returns</li>
+              <li>Member management</li>
+            </ul>
+          </div>
+
+      </section>
+
     </main>
-    <footer>
-        <p>&copy; 2024. All rights reserved.</p>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#home">
+            <span class="brand-mark">A</span>
+            <span>AOA Library</span>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#collection">Collection</a>
+          <a href="#services">Services</a>
+          <a href="#staff">Staff</a>
+        </div>
+
+        <p>&copy; <span id="year"></span> AOA Library. All rights reserved.</p>
+      </div>
     </footer>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
 
