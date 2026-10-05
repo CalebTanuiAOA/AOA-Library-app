@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOA Library | Staff Mode</title>
+    <link rel="stylesheet" href="staff-styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <span class="brand-mark">A</span>
+          <span>AOA Library</span>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box" aria-label="Search records">
+            <span>🔎</span>
+            <input type="text" placeholder="Search books, members, or IDs" />
+          </label>
+
+          <div class="user-pill">
+            <span class="avatar">S</span>
+            <span>Staff View</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Staff Mode Dashboard</h1>
+          <div class="status-badge"><span class="status-dot"></span> System Pending</div>
+        </div>
+
+        <section class="stats-grid" aria-label="Library status overview">
+          <article class="stat-card">
+            <div class="stat-label">Checked out</div>
+            <div class="stat-value">0</div>
+            <div class="stat-sub">Across - categories</div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-label">Due today</div>
+            <div class="stat-value">0</div>
+            <div class="stat-sub">-</div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-label">Active members</div>
+            <div class="stat-value">0</div>
+            <div class="stat-sub">-</div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-label">Scanner status</div>
+            <div class="stat-value">Pending</div>
+            <div class="stat-sub">-</div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <aside class="panel">
+            <div class="panel-header">
+              <h2>Quick actions</h2>
+            </div>
+            <div class="panel-body">
+              <div class="quick-actions">
+                <button class="action-btn" type="button">
+                  <span>Scan book</span>
+                  <span class="action-icon">📖</span>
+                </button>
+                <button class="action-btn" type="button">
+                  <span>Check out</span>
+                  <span class="action-icon">✅</span>
+                </button>
+                <button class="action-btn" type="button">
+                  <span>Check in</span>
+                  <span class="action-icon">↩️</span>
+                </button>
+                <button class="action-btn" type="button">
+                  <span>Member lookup</span>
+                  <span class="action-icon">👤</span>
+                </button>
+                <button class="action-btn" type="button">
+                  <span>Add inventory</span>
+                  <span class="action-icon">＋</span>
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Processing desk</h3>
+            </div>
+            <div class="panel-body">
+              <form class="form-grid">
+                <div class="field">
+                  <label for="memberId">Member ID</label>
+                  <input id="memberId" type="text" value="AOA2026010" />
+                </div>
+
+                <div class="field">
+                  <label for="bookId">Book or barcode</label>
+                  <input id="bookId" type="text" placeholder="Scan or enter barcode" />
+                </div>
+
+                <div class="field">
+                  <label for="actionType">Action</label>
+                  <select id="actionType">
+                    <option>Check out</option>
+                    <option>Check in</option>
+                    <option>Renew</option>
+                    <option>Reserve</option>
+                  </select>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                  <button class="primary-btn" type="button">Submit request</button>
+                  <button class="secondary-btn" type="reset">Clear form</button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <aside class="panel">
+            <div class="panel-header">
+              <h3>Alerts</h3>
+            </div>
+            <div class="panel-body alerts">
+              <div class="alert-item warning">
+                <strong>No students borowwing books yet</strong>
+                <p>Add all students and IDs to the system.</p>
+              </div>
+
+              <div class="alert-item info">
+                <strong>No books in the system</strong>
+                <p>Add all books and barcodes to the system.</p>
+              </div>
+
+              <div class="alert-item info">
+                <strong>Inventory check</strong>
+                <p>We have no inventory :P  </p>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="panel" style="margin-top: 1rem;">
+          <div class="panel-header">
+            <h3>Recent activity</h3>
+          </div>
+          <div class="panel-body table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Member</th>
+                  <th>Book</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Due date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Leila A.</td>
+                  <td>Python Basics</td>
+                  <td>Borrow</td>
+                  <td><span class="badge checked-out">Checked out</span></td>
+                  <td>May 14</td>
+                </tr>
+                <tr>
+                  <td>Marcus T.</td>
+                  <td>Creative Writing</td>
+                  <td>Return</td>
+                  <td><span class="badge returned">Returned</span></td>
+                  <td>May 10</td>
+                </tr>
+                <tr>
+                  <td>Amira N.</td>
+                  <td>Data Structures</td>
+                  <td>Renew</td>
+                  <td><span class="badge due">Due soon</span></td>
+                  <td>May 12</td>
+                </tr>
+                <tr>
+                  <td>Daniel K.</td>
+                  <td>History of Design</td>
+                  <td>Borrow</td>
+                  <td><span class="badge checked-out">Checked out</span></td>
+                  <td>May 15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      <script src="staffmode.js"></script>
+    </main>
+  </body>
+</html>
