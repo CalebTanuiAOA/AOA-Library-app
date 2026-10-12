@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Self Checkoutr</title>
+    <script src="https://unpkg.com"></script>
+</head>
+<body>
+
+    <h1>AOA Self Checkout</h1>
+    
+    <div id="camera-sees" style="width: 500px;"></div>
+
+    <script>
+        function whenScanSucessful(decodedText, decodedResult) {
+            window.open("https://google.com" + decodedText, "_blank");
+        }
+
+        const scanner = new Html5QrcodeScanner(
+            "camera-sees", 
+            { fps: 10, qrbox: 250 }
+        );
+        
+        scanner.render(whenScanSucessful);
+    </script>
+
+</body>
+</html>
