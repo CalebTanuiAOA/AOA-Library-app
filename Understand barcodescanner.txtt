@@ -1,39 +1,37 @@
-
 Block 1
+In your code, this is the `<head>` section at the very top:
 
-In my code, this is the <head> section at the very top:
 html
 <head>
     <meta charset="UTF-8">
-    <title>Live Web Barcode Scanner</title>
+    <title>Self Checkoutr</title>
     <script src="https://unpkg.com"></script>
 </head>
 
 It tells the browser to fetch the free scanning engine from the internet before doing anything else. Without this block, the computer won't understand what a barcode even looks like.
 
 Block 2
+In your code, this is the first part of the `<body>` section:
 
-In your code, this is the first part of the <body> section:
 html
 <h1>AOA Self Checkout</h1>
-<div id="scanner-view" style="width: 500px;"></div>
+<div id="camera-sees" style="width: 500px;"></div>
 
- This is the physical content you see on the page. The <h1> is just your visible text title. The <div> is an empty, invisible box. It acts as a placeholder where the live video will eventually be placed.
+This is the physical content you see on the page. The `<h1>` is just your visible text title. The `<div>` is an empty, invisible box. It acts as a placeholder where the live video will eventually be placed.
 
- Block 3
+Block 3
+In your code, this is the `<script>` section at the bottom:
 
-In your code, this is the <script> section at the bottom:
 html
 <script>
-    function onScanSuccess(decodedText, decodedResult) {
-        alert("Scanned Code Data: " + decodedText);
+    function whenScanSucessful(decodedText, decodedResult) {
+        window.open("https://google.com" + decodedText, "_blank");
     }
 
-    const html5QrcodeScanner = new Html5QrcodeScanner(
-        "scanner-view", 
-        { fps: 10, qrbox: 250 }
+    const scanner = new Html5QrcodeScanner(
+        "camera-sees", { fps: 10, qrbox: 250 }
     );
-    
-    html5QrcodeScanner.render(onScanSuccess);
+    scanner.render(whenScanSucessful);
 </script>
-This is the action step. It takes the logic from Block 1, grabs your physical webcam feed, and wires them directly into the empty box from Block 2. It handles the actual work of turning on the camera lens and waiting to trigger the alert popup.
+
+This is the action step. It takes the logic from Block 1, grabs your physical webcam feed, and wires them directly into the empty box from Block 2. It handles the actual work of turning on the camera lens and waiting to open the Google search link automatically in a new browser tab.
