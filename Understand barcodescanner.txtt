@@ -1,0 +1,45 @@
+How does he barcode scanner work?
+## <!DOCTYPE html>
+Tells the web browser that this file is a modern webpage.
+## <html lang="en">
+Starts the webpage and tells the computer the language used is English.
+## <head>
+Starts a hidden section for settings and links that the user cannot see on the screen.
+## <meta charset="UTF-8">
+Makes sure all letters, numbers, and symbols display correctly on the screen without turning into weird characters.
+## <title>Library Self Checkout</title>
+Sets the text that appears on the browser tab at the very top of your window.
+## <script src="https://unpkg.com"></script>
+Brings in the free scanner tool from the internet. This tool does all the hard math to read barcodes so you do not have to write it yourself.
+## </head>
+Closes the hidden settings section.
+## <body>
+Starts the visible section of the webpage where all the content lives.
+## <h1>AOA Library Self Checkout</h1>
+Displays a large, bold title text at the top of the webpage.
+## <div id="scanner-view" style="width: 500px;"></div>
+Creates an empty box on the screen that is 500 pixels wide. This is exactly where the webcam video feed will show up.
+## <script>
+Starts the section where we write JavaScript code to control how the scanner behaves.
+## function onScanSuccess(decodedText, decodedResult) 
+Creates a rule that says: "The exact millisecond a barcode is found, run the following action."
+## alert("Scanned Code Data: " + decodedText);
+Pops up a small alert window on the screen showing the numbers or text hidden inside the barcode and ends the success rule.
+## const html5QrcodeScanner = new Html5QrcodeScanner(
+Creates a brand new scanner setup.
+## "scanner-view",
+Tells the scanner to put the live webcam video inside the empty box we made earlier.
+## { fps: 10, qrbox: 250 }
+Tells the scanner to look at the camera 10 times every second, and draws a square target box on the screen to help the user aim the barcode.
+## );
+Finishes setting up the scanner choices.
+## html5QrcodeScanner.render(onScanSuccess);
+Asks the user for permission to use the webcam, turns the camera on, and starts looking for barcodes.
+## </script>
+Ends the JavaScript code section.
+## </body>
+Ends the visible section of the webpage.
+## </html>
+Ends the entire webpage file.
+
+
